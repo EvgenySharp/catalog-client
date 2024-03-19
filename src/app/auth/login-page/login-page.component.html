@@ -1,0 +1,63 @@
+<form  #form="ngForm" (submit)="onSubmit(form)">  
+    <div class="wrappage">
+        <div class="main-content space-padding-tb-70">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12">
+                        <div class="customer-page">
+                            <div class="title-page">
+                                <h3>Login</h3>
+                            </div>
+                            <div class="form-customer form-login">
+                                <div class="form-group">
+                                    <label for="exampleInputEmail1">Username or email address *</label>
+                                    <input type="email" class="form-control form-account"
+                                    #name="ngModel" name="name"
+                                    [(ngModel)]="service.LoginFormData.name"
+                                    [required]="true" [minlength]="4">
+
+                                    <div class="helper-text red-text">
+                                        <span *ngIf="name.errors?.['required'] && name.touched">
+                                            login is required.
+                                        </span>                
+                                        <span *ngIf="name.errors?.['minlength'] && name.touched">
+                                            login must be at least 4 characters long.
+                                        </span>
+                                    </div>
+
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleInputPassword1">Password *</label>
+                                    <input type="password" class="form-control form-account"
+                                    #password="ngModel"  name="password"
+                                    [(ngModel)]="service.LoginFormData.password"
+                                    [required]="true" [minlength]="4">
+                                                            
+                                    <div class="helper-text red-text">
+                                        <span *ngIf="password.errors?.['required'] && name.touched">
+                                            password is required.
+                                        </span>                
+                                        <span *ngIf="password.errors?.['minlength'] && name.touched">
+                                            password must be at least 4 characters long.
+                                        </span>
+                                    </div>
+                                </div>  
+                                <button type="submit" class="btn-login hover-white"
+                                    [disabled]="form.invalid || form.disabled" >Login
+                                </button>
+                                <label class="form-check-label">
+                                    <input type="checkbox" class="form-check-input">
+                                    <span>Remember me</span>
+                                </label>
+                                <a href="" class="lost-password">Lost your password?</a>
+                            
+                            </div>
+                            <span class="divider"></span>
+                            <p href="" class="btn link-button create-account hover-black" routerLink="/register">Create an account</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>

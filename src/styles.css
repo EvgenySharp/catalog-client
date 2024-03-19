@@ -1,0 +1,7 @@
+.p-line-through {
+    text-decoration: line-through;
+}
+
+p {
+    display: inline;
+}

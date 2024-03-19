@@ -1,0 +1,215 @@
+.pushmenu-push-toleft .wrappage:after {
+  background: rgba(29, 29, 31, 0.6);
+  content: "";
+  cursor: pointer;
+  height: 100%;
+  left: 0px;
+  position: absolute;
+  top: 0px;
+  width: 100%;
+  z-index: 9999; }
+
+.pushmenu-push-toright-cart .wrappage:after {
+  position: absolute;
+  background: rgba(29, 29, 31, 0.6) none repeat scroll 0 0;
+  content: "";
+  height: 100%;
+  width: 100%;
+  left: 0px;
+  top: 0px;
+  z-index: 9999;
+  cursor: pointer; }
+
+.pushmenu-push-toright .wrappage {
+  position: relative; }
+
+@media (max-width: 1024px) {
+  .main-content {
+  margin-bottom: 30px; } }
+
+.space-padding-tb-70 {
+  padding-top: 70px;
+  padding-bottom: 70px; } 
+
+.container {
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 15px;
+  padding-right: 15px; }
+
+.row {
+  margin-left: -15px;
+  margin-right: -15px; }
+
+.col-xs-12 {
+  width: 100%; }
+
+.col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12 {
+  float: left; }
+
+.col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 {
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px; }
+
+.col-sm-12 {
+  width: 100%; }
+
+.customer-page {
+  margin: 0 auto 300px auto;
+  max-width: 560px;
+  position: relative; }
+
+.customer-page .title-page h3 {
+  font-size: 20px;
+  font-weight: 500;
+  border-radius: 30px;
+  -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.06);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.06);
+  display: table;
+  line-height: 54px;
+  margin: 0 auto 60px;
+  padding: 0 60px; }
+
+.form-customer label {
+  font-size: 14px;
+  font-weight: 500;
+  margin-top: 15px;
+  margin-bottom: 15px; }
+
+.form-customer .form-account {
+  background: #f8f8f8;
+  border: 1px solid #f1f1f1;
+  height: 54px;
+  border-radius: 0;
+  -webkit-box-shadow: none;
+  box-shadow: none; }
+
+.form-customer .form-account::-webkit-input-placeholder {
+  color: #000;
+  font-size: 14px; }
+
+.form-customer .form-account:-moz-placeholder {
+  color: #000;
+  font-size: 14px; }
+
+.form-customer .form-account::-moz-placeholder {
+  color: #000;
+  font-size: 14px; }
+
+.form-customer .form-account:-ms-input-placeholder {
+  color: #000;
+  font-size: 14px; }
+
+.form-customer .btn-login {
+  width: 196px;
+  height: 54px;
+  line-height: 54px;
+  text-align: center;
+  color: #fff;
+  background: #000;
+  border-radius: 0;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 0; }
+
+.form-customer .btn-login:hover {
+  background: #4b4b4b;
+  color: #fff;
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s; }
+
+.form-customer .lost-password {
+  text-decoration: underline;
+  float: right;
+  margin: 15px 0; }
+
+.form-customer .create-account {
+  height: 54px;
+  line-height: 54px; }
+
+
+.checkout-login .form-login {
+  display: none; }
+
+.checkout-login .form-login p {
+  color: #a4a4a4;
+  line-height: 24px;
+  margin-bottom: 20px; }
+
+.form-group {
+margin-bottom: 15px; }
+
+.hover-white {
+  background: #000;
+  color: #fff; }
+
+.hover-white:hover {
+  background: #fff;
+  color: #000;
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s; }
+
+.divider {
+  border-bottom: 1px solid #ededed;
+  color: #d8d8d8;
+  display: inline-block;
+  float: left;
+  height: 1px;
+  margin-bottom: 37px;
+  position: relative;
+  text-align: center;
+  width: 100%; }
+
+.btn > .caret,
+.dropup > .btn > .caret {
+  border-top-color: #000 !important; }
+
+.link-button {
+  width: 100%;
+  border: 1px solid #dfdfdf;
+  padding: 0;
+  border-radius: 0;
+  height: 52px;
+  line-height: 52px; }
+
+.form-customer .create-account {
+  height: 54px;
+  line-height: 54px; }
+
+.hover-black:hover {
+  background: #000;
+  color: #fff;
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s; }
+
+.form-customer .form-check-label {
+  margin-left: 25px;
+  color: #a4a4a4;
+  cursor: pointer; }
+
+.form-customer .form-check-label.ver2 {
+  margin-left: 0;
+  color: #000; }
+
+.form-customer .form-check-label span:before {
+  content: "";
+  display: inline-block;
+  width: 13px;
+  height: 13px;
+  border: 1px solid #e4e4e4;
+  background: #f5f5f5;
+  border-radius: 50%;
+  margin-right: 11px;
+  margin-bottom: -2px; }
+  
+.form-customer .form-check-label .form-check-input {
+    display: none; }
+
+.form-customer .form-check-label .form-check-input:checked + span::before {
+  background: #000000;
+  border-color: #000000; }

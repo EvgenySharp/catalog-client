@@ -1,0 +1,93 @@
+<body>
+        <div class="row">
+            <div class="col-12">
+                <div class="product-topbar d-xl-flex align-items-end justify-content-between">
+                    <div class="total-products" *ngIf="_projectOnPage">
+                        <p>Showing {{_projectOnPage}} products</p>
+                        <div class="view d-flex">
+                            <a href="#"><i class="fa fa-th-large" aria-hidden="true"></i></a>
+                            <a href="#"><i class="fa fa-bars" aria-hidden="true"></i></a>
+                        </div>
+                    </div>
+                    <div class="product-sorting d-flex">
+                        <div class="sort-by-date d-flex align-items-center mr-15" >
+                            <p>Sort by</p>
+                            <form action="#" method="get">
+                                <select name="select" id="sortBydate" [(ngModel)]="_filtre" (change)="OnApplyingFilter()">
+                                    <option value="Title">Title</option>
+                                    <option value="Price">Price</option>  
+                                </select>
+                            </form>
+                        </div>
+                        <div class="view-product d-flex align-items-center">
+                            <p>View</p>
+                            <form>
+                                <select [(ngModel)]="_page.PageSize" (change)="OnQuantityChange()" name="select" id="viewProduct">
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="10">10</option>
+                                    <option value="20">20</option>
+                                    <option value="30">30</option>
+                                    <option value="40">40</option>
+                                </select>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class=container-fluid>
+            <div class="col-12 col-sm-6 col-md-12 col-xl-6" *ngIf="_products | async as _products">
+                <div class="single-product-wrapper"*ngFor="let product of _products">
+                    <div class="product-img">
+                        <img src="./assets/images/{{product.title}}.jpg" alt="">
+                        <img class="hover-img" src="./assets/images/{{product.title}}.jpg" alt="">
+                    </div>
+
+                    <div class="product-description d-flex align-items-center justify-content-between">
+                        <div class="product-meta-data">
+                            <div class="line"></div>
+                            <p class="product-price">${{product.price}}</p>                        
+                            <a href="product-details.html">
+                                <h6>{{product.title}}</h6>
+                            </a>
+                        </div>
+                        <div class="ratings-cart text-right">
+                            <div class="cart">
+                                <a href (click)="OnClickCart(product.id)" data-toggle="tooltip" data-placement="left" title="Add to Cart"><img src="./assets/images/cart.png" alt=""></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>     
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <nav aria-label="navigation">
+                    <ul class="pagination justify-content-end mt-50"  [(ngModel)]="_page.PageCount" (change)="OnPageChange()">
+                        <li class="page-item"><a class="page-link" value="1">01.</a></li>
+                        <li class="page-item"value="2"><a class="page-link" >02.</a></li>
+                        <li class="page-item"><a class="page-link" value="3">03.</a></li>
+                        <li class="page-item"><a class="page-link" value="4">04.</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>        
+        <select [(ngModel)]="_page.PageCount" (change)="OnPageChange()">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="10">10</option>
+            <option value="20">20</option>
+            <option value="30">30</option>
+            <option value="40">40</option>
+        </select>
+
+<script src="js/jquery/jquery-2.2.4.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/plugins.js"></script>
+<script src="js/active.js"></script>
+</body>

@@ -1,0 +1,38 @@
+<body>
+    <div class="main-content-wrapper d-flex">
+        <div class="shop_sidebar_area">
+            <div class="widget catagory mb-50">
+                <h6 class="widget-title mb-30">Catagories</h6>
+                <div class="catagories-menu" *ngIf="_categories | async as categories">   
+                    <ul>
+                        <li><a (click)="OnClickCategory(category.id)" *ngFor="let category of categories"
+                            [routerLink]="['categories', category.id]">
+                            {{category.title}}
+                         </a>
+                     </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="widget brands mb-50">
+                <h6 class="widget-title mb-30">Brands</h6>
+                <div class="widget-desc" *ngIf="_mnufacturers | async as mnufacturers">
+                    <div class="form-check" *ngFor="let mnufacturer of mnufacturers">
+                        <input (click)="OnManufacturerCategory(mnufacturer.id)" class="form-check-input" type="checkbox" value="" id="amado">
+                        <label class="form-check-label" for="amado">{{mnufacturer.title}}</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="amado_product_area section-padding-100">
+            <router-outlet></router-outlet>
+        </div>
+    </div>
+
+    <script src="js/jquery/jquery-2.2.4.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/plugins.js"></script>
+    <script src="js/active.js"></script>
+
+</body>
